@@ -1,0 +1,28 @@
+{{>layouts/header}}
+
+<table class="table"> // show.mustache에서 복사한 코드 붙여넣기
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">1</th>
+        <td colspan="2">제목1111</td>
+        <td>내용11111</td>
+    </tr>
+    <!-- articleList에 있는 데이터 수만큼 이 부분을 반복 실행(like for문) -->
+    {{#articleList}}
+        <tr>
+            <th>{{id}}</th>
+            <th>{{title}}</th>
+            <th>{{content}}</th>
+        </tr>
+    {{/articleList}}
+    </tbody>
+</table>
+
+{{>layouts/footer}}
